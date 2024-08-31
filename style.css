@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(43, 40, 40);
+  margin: 30px;
+  color: #fff;
+  
+}
+
+.meme-image {
+  height: 70vh;
+  margin-bottom: 30px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+.pag-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  padding: 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.controlls {
+  width: 10px;
+  height: 10px;
+  background-color: #7ca9cd;
+  border-radius: 50%;
+  border: 1px solid #7ca9cd;
+}
+
+.btn:hover .controlls{
+  background-color: #f0eded;
+  border: 1px solid #f0eded;
+}
+
+.btn-active .controlls{
+  background-color: rgb(43, 40, 40);
+}
+
+.btn-active:hover .controlls{
+  border: 1px solid #f0eded;
+  background-color: rgb(43, 40, 40);
+}
+
+
