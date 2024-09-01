@@ -29,9 +29,14 @@ text.textContent = images[0].text;
 
 pagination.addEventListener('click', (e) => {  
   for (let key in Object.keys(btns)) {
+    if (btns[key].classList.contains('btn-active')) {
+      btns[key].classList.remove('btn-active');
+    }
+
     if (btns[key] === e.target || e.target.closest('.btn') === btns[key]) {
       meme_image.classList.remove(classes[1]);
       text.classList.add('clear-anim');
+      btns[key].classList.add('btn-active');
       meme_image.classList.add(images[key].name);
       setTimeout(() => {
         text.classList.remove('clear-anim'),
