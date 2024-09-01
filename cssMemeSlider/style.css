@@ -78,3 +78,12 @@ body {
 .fourth {
   background-image: url('assets/img/fourth.png');
 }
+
+.clear-anim {
+  animation: clear-anim .5s;
+}
+
+@keyframes clear-anim {
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
