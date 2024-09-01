@@ -32,15 +32,11 @@ pagination.addEventListener('click', (e) => {
     if (btns[key] === e.target || e.target.closest('.btn') === btns[key]) {
       meme_image.classList.remove(classes[1]);
       text.classList.add('clear-anim');
-      // text.textContent = '';
       meme_image.classList.add(images[key].name);
       setTimeout(() => {
         text.classList.remove('clear-anim'),
         text.textContent = images[key].text;
-
       },400) 
-
-      // text.classList.add('anim');
     }
   }
 })
