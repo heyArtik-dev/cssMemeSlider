@@ -33,6 +33,10 @@ pagination.addEventListener('click', (e) => {
       btns[key].classList.remove('btn-active');
     }
 
+    if (btns[key].classList.contains('btn-active')) {
+      btns[key].classList.remove('btn-active');
+    }
+
     if (btns[key] === e.target || e.target.closest('.btn') === btns[key]) {
       text.classList.add('clear-anim');
       btns[key].classList.add('btn-active');
