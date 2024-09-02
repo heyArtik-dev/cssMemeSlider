@@ -23,20 +23,28 @@ const pagination = document.querySelector('.pagination');
 const btns = document.querySelectorAll('.btn');
 const classes = meme_image.classList;
 const classesText = text.classList;
+const img = document.querySelector('img');
 
-meme_image.classList.add(images[0].name);
 text.textContent = images[0].text;
 
 pagination.addEventListener('click', (e) => {  
   for (let key in Object.keys(btns)) {
+    if (btns[key].classList.contains('btn-active')) {
+      btns[key].classList.remove('btn-active');
+    }
+
     if (btns[key] === e.target || e.target.closest('.btn') === btns[key]) {
-      meme_image.classList.remove(classes[1]);
       text.classList.add('clear-anim');
-      meme_image.classList.add(images[key].name);
+      btns[key].classList.add('btn-active');
+      img.classList.add('clear-anim');
       setTimeout(() => {
-        text.classList.remove('clear-anim'),
+        img.src = '../cssMemeSlider/assets/img/' + images[key].name + '.png';
+        img.alt = images[key].name;
+        text.classList.remove('clear-anim');
+        img.classList.remove('clear-anim');
         text.textContent = images[key].text;
       },400) 
     }
   }
 })
+

@@ -10,12 +10,11 @@ body {
 }
 
 .meme-image {
-  height: 70vh;
-  margin-bottom: 30px;
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  margin: 0 auto 20px;
   border-radius: 10px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   transition: .5s;
 }
 
@@ -62,23 +61,6 @@ body {
   background-color: rgb(43, 40, 40);
 }
 
-
-.first {
-  background-image: url('assets/img/first.png');
-}
-
-.second {
-  background-image: url('assets/img/second.png');
-}
-
-.third {
-  background-image: url('assets/img/third.png');
-}
-
-.fourth {
-  background-image: url('assets/img/fourth.png');
-}
-
 .clear-anim {
   animation: clear-anim .5s;
 }
@@ -86,4 +68,19 @@ body {
 @keyframes clear-anim {
   from{opacity: 1;}
   to{opacity: 0;}
+}
+
+@media (max-width:575px) {
+
+  .meme-image {
+    margin: 0 auto;
+  }
+  
+  .pag-container {
+    flex-direction: column-reverse;
+  }
+
+  .text {
+    align-self: flex-start;
+  }
 }
