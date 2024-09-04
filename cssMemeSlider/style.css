@@ -34,8 +34,8 @@ body {
   align-items: center;
   justify-content: center;
   list-style: none;
-  width: 30px;
-  height: 40px;
+  width: 1.5em;
+  height: 1.5em;
   cursor: pointer;
 }
 
@@ -65,12 +65,17 @@ body {
   animation: clear-anim .5s;
 }
 
+.text {
+  font-size: 1em;
+  font-family: cursive;
+}
+
 @keyframes clear-anim {
   from{opacity: 1;}
   to{opacity: 0;}
 }
 
-@media (max-width:575px) {
+@media (max-width:500px) {
 
   .meme-image {
     margin: 0 auto;
