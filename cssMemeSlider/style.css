@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(43, 40, 40);
+  margin: 30px;
+  color: #fff;
+}
+
+.meme-image {
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.pag-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  padding: 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.controlls {
+  width: 10px;
+  height: 10px;
+  background-color: #7ca9cd;
+  border-radius: 50%;
+  border: 1px solid #7ca9cd;
+}
+
+.btn:hover .controlls{
+  background-color: #f0eded;
+  border: 1px solid #f0eded;
+}
+
+.btn-active .controlls{
+  background-color: rgb(43, 40, 40);
+}
+
+.btn-active:hover .controlls{
+  border: 1px solid #f0eded;
+  background-color: rgb(43, 40, 40);
+}
+
+.clear-anim {
+  animation: clear-anim .5s;
+}
+
+.text {
+  font-size: 1em;
+  font-family: cursive;
+}
+
+@keyframes clear-anim {
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
+
+@media (max-width:500px) {
+
+  .meme-image {
+    margin: 0 auto;
+  }
+  
+  .pag-container {
+    flex-direction: column-reverse;
+  }
+
+  .text {
+    align-self: flex-start;
+  }
+}
